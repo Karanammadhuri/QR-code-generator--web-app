@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            background-color: #007bff; /* Set background color to blue */
+            font-family: Arial, sans-serif; /* Set font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #fff; /* Set title color to white */
+            text-align: center; /* Center-align the title */
+            margin-top: 50px; /* Add margin to the top of the title */
+        }
+
+        form {
+            max-width: 400px; /* Set maximum width for the form */
+            width: 80%; /* Set width of the form */
+            padding: 20px; /* Add padding to the form */
+            background-color: #fff; /* Set background color of the form to white */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+        }
+
+        input[type="text"] {
+            width: 100%; /* Set width of the input field to 100% */
+            padding: 10px; /* Add padding to the input field */
+            margin-bottom: 20px; /* Add margin to the bottom of the input field */
+        }
+
+        button {
+            width: 100%; /* Set width of the button to 100% */
+            padding: 10px; /* Add padding to the button */
+            background-color: #0056b3; /* Set background color of the button */
+            color: #fff; /* Set text color of the button to white */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        button:hover {
+            background-color: #003c80; /* Darken background color of the button on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate QR Code</button>
+    </form>
+</body>
+</html>

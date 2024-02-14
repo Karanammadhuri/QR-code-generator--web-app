@@ -1,0 +1,1 @@
+# this folder is to save QR codes that are generated.
